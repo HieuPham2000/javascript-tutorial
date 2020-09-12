@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài 9: Kiểu dữ liệu</title>
+</head>
+<body>
+  <p id="data-type"></p>
+  <script type="text/javascript">
+    var x = 100;
+    var name = "Nam";
+    var isEmpty = false;
+        
+    /* string, number, boolean, undefined
+    object, array, function
+    freeCodeCamp => 8 data types: undefined, null, boolean, string, symbol, object, bigint, number
+    */
+
+    // number
+    100;
+    100.1;
+
+    // string
+    'bla bla';
+    "bla bla bla";
+
+    // boolean
+    true;
+    false;
+
+    // undefined: value of t is undefined
+    var t;
+
+    // object
+    var person = {
+        name: "John",
+        age: 20,
+        weight: 70.5
+    }
+
+    // function
+    function sum(a, b) {
+        return (a + b);
+    }
+
+    // array
+    var arr = ['apple', 'banana', 'lemon']
+
+    // null
+    var s = null; // not actually an object??
+
+    // kiểm tra kiểu: typeof
+    // hiện thị tại thẻ <p> có id = "data-type"
+    document.getElementById("data-type").innerHTML = typeof sum;
+  </script>
+</body>
+</html>

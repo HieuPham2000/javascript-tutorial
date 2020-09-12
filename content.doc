@@ -1,0 +1,10 @@
+Bài 1: Hiển thị alert "Hello Word"
+Bài 2: Tách file .html và .js, file .js để ở folder script, ta sẽ link đến file js
+Bài 3: Demo về việc sử dụng function trong file js để bắt sự kiện click chuột
+Bài 4: Một số lưu ý về code: vị trí thẻ script, cách trình bày
+Bài 5: Comment
+Bài 6: Biến
+Bài 7: Toán tử số học: +, -, *, / (kết quả số thực), % (lấy dư cả với số thực), ** (lũy thừa), ++, --
+Bài 8: Phép gán (=, += ...), thứ tự ưu tiên (y = x++; z = ++x)
+Bài 9: Các kiểu dữ liệu: undefined, null, number, string, object, boolean...
+Bài 10: Function

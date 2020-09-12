@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài 6: Biến trong JavaScript</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Khai báo biến đầu chương trình
+    /* Cách đặt tên:
+      - Bắt đầu bằng chữ
+      - Có ý nghĩa
+      - Js có phân biệt chữ hoa chữ thường
+      - lowerCamelCase
+      ...
+    */
+        
+    var name = "Hieu Pham";
+    var firstName, lastName;
+    var age = 19;
+    var pi = 3.1416;
+    var y = true;
+
+    // điểm khác biệt
+    y = age;
+    y = pi;
+
+    // hàm: thay đổi văn bản trong <p></p>
+    function test() {
+        document.getElementById('demo').innerHTML = firstName;
+        // result is "undefined"
+    }
+  </script>
+  <button onclick="test()" >Click to see the result</button>
+  <p id="demo"></p> 
+</body>
+</html>

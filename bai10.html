@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài 10: Function</title>
+</head>
+<body>
+  <h3>JS Function</h3>
+  <p id="sum"></p>
+  <p id="test"></p>
+  <p id="say"></p>
+  <script type="text/javascript">
+    var a = 100;
+    var b = 200;
+    var sum = sumOfAAndB(a, b);
+
+    function sumOfAAndB(a, b) { // không cần xác định kiểu tham số?
+        return (a + b);
+    }
+
+    function sumOfArray(start, end) {
+        var s = 0;
+        for(var i = start; i <= end; i++) {
+            s += i;
+        }
+        return s;
+    }
+
+    function sayHello(msg, name) {
+        var res = msg + " " + name + "!";
+        return res;
+    }
+
+
+    // gán nội dung của phần tử id = "sum" 
+    document.getElementById("sum").innerHTML = "a + b = " + sum + ", tổng từ 1 đến 10 = " + sumOfArray(1, 10); 
+    // test
+    document.getElementById("test").innerHTML = sayHello
+    // function sayHello
+    document.getElementById("say").innerHTML = sayHello("Hi", "Luffy");
+
+  </script>
+</body>
+</html>

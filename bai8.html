@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bài 8: Phép gán</title>
+</head>
+<body>
+
+  <p> + - * / % ** ++ --</p>
+  <script type="text/javascript">
+    var y = 99;
+    var z = 10;
+    z %= 5; // <=> z = z%5;
+
+    // thứ tự ưu tiên
+    var t = y++; 
+    // t = 99, y = 100
+    var u = ++y;
+    // y = 101, u = 101
+
+    alert("t = " + t + ", u = " + u);
+  </script>
+</body>
+</html>
