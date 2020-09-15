@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Bài 11: Object</title>
 </head>
 <body>
-  <script></script>
+  <p id="test"></p>
+  <script type="text/javascript">
+    // Objects trong Javascript
+    var person = {
+      firstName: "Hieu", // nhớ là : chứ không phải = => nếu không sẽ xảy ra lỗi (không hiện gì cả)
+      lastName: "Pham",
+      age: 19,
+      gender: "Male",
+      address: "Hanoi",
+      smile: function() {
+        return "Hehe";
+      },
+      sayHello: function() {
+        return "Hello";
+      },
+      printFullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+
+    person.firstName = "Hiếu";
+    person.lastName = "Phạm";
+    document.getElementById("test").innerHTML = person.printFullName();
+  </script>
+  
 </body>
 </html>

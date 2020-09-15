@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 12: Thuộc tính</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var person = {
+        firstName: "Hieu",
+        lastName: "Pham",
+        age: 19,
+        gender: 'male',
+      }
+
+      person.fullName = person.firstName + ' ' + person.lastName; // ở đây là dấu = chứ không phải key : value
+      
+      delete person.gender;
+      var a = 'age';
+      document.getElementById("demo").innerHTML = person.fullName + ', ' + person[a] + ', ' + person['gender'];
+    </script>
+  </body>
+</html>
