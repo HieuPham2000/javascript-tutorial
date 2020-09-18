@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 16: Number</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var num1 = 12345;
+      var num2 = 1.2345;
+      var num3 = 1.2345e10; 
+      // e-1 -> 0.12345
+
+      var num4 = 0.2 + 0.7; 
+      // chú ý kết quả có sai số => cẩn thận khi so sánh ==
+      // (0.2*10 + 0.7*10)/10 thì sẽ ra chính xác
+      
+      var num5 = 1/(-Infinity); // 0
+      var num6 = -1/0; // -Infinity
+
+      var num7 = 2/"iii"; // NaN => typeof là number
+
+      document.getElementById("demo").innerHTML = 2 + "20" + 10*"20" - "10";
+    </script>
+  </body>
+</html>

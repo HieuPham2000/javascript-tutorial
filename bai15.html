@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 15: String object</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var brands = "  oPPo OPpo OppO oppO Apple Samsung Vsmart Oppo Bphone Oppo ";
+      // toUpperCase(), toLowerCase(), lastIndexOf(...)
+      // document.getElementById("demo").innerHTML = brands.indexOf("Oppo", 20);
+      
+      // var arr = brands.split(' ');
+      // document.getElementById("demo").innerHTML = arr + typeof arr;
+
+      // document.getElementById("demo").innerHTML = brands.length + "<br>" + brands.trim().length;
+
+      // thay thế cụm đầu tiên bắt gặp
+      // document.getElementById("demo").innerHTML = brands.replace("Oppo", "Nokia"); 
+
+      // thay thế tất cả
+      document.getElementById("demo").innerHTML = brands.replace(/Oppo/g, "Nokia"); 
+      
+    </script>
+  </body>
+</html>
