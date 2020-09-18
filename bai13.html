@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 13: Method</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var person = {
+        firstName: "Hieu",
+        lastName: "Pham",
+        age: 19,
+        move: function() {
+          return "Walk step by step";
+        },
+        getFullName: function() {
+          return this.firstName + ' ' + this.lastName;
+        }
+      }
+      // add method
+      person.say = function() {
+        return "Hello";
+      }
+
+      // objectName.objectMethod()
+      document.getElementById("demo").innerHTML = "Say: " + person.say();
+    </script>
+  </body>
+</html>
