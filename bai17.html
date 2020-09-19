@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 16: Method của Number</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var num1 = 12345;
+      // method
+      /*
+        -toString(): -> string
+        -toFixed(n): -> string: n chữ số thập phân, có làm tròn
+        -toPrecision(n): -> string: n chữ số (thu gọn chứ không phải cắt bỏ)
+        -Number(para): -> number nếu có thể, nếu không -> NaN
+        -praseInt(str): cụm string đầu tiên đến ký tự có thể chuyển-> số nguyên
+        -praseFloat(str): cụm string đầu tiên đến ký tự có thể chuyển -> số thực
+      */
+
+      // property
+      // MAX_VALUE...NaN
+      var x = 100.1293456; // x.toPrecision(1) -> 1e+2
+      var s = "  100.12addad aaa 100 aaa  " //
+      document.getElementById("demo").innerHTML = parseFloat(s);
+    </script>
+  </body>
+</html>
