@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 19: Array</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="check"></p>
+    <script>
+      var friends = ["Hoang", "Quoc", "Tuan", "Tung"];
+      var len = friends.length;
+      
+      friends[0] = "Hoàng";
+      friends[9] = "Nam";
+      document.getElementById("demo").innerHTML = friends[10] + "<br>" + friends; 
+      document.getElementById("check").innerHTML = Array.isArray(friends) + "<br>" + (friends instanceof Array); 
+      
+    </script>
+  </body>
+</html>
