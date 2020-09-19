@@ -11,9 +11,10 @@
       var len = friends.length;
       
       friends[0] = "Hoàng";
-      friends[9] = "Nam";
+      // friends[9] = "Nam";
       document.getElementById("demo").innerHTML = friends[10] + "<br>" + friends; 
-      document.getElementById("check").innerHTML = Array.isArray(friends) + "<br>" + (friends instanceof Array); 
+      document.getElementById("check").innerHTML = Array.isArray(friends) + "<br>" + (friends instanceof Array);
+      // nhớ là + (friends instanceof Array) phải có ngoặc nếu không sẽ nhập nhằng
       
     </script>
   </body>

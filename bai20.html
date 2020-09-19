@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 20: Array methods</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      var friends = ["Hoang", "Quoc", "Tuan", "Tung"];
+      var countries = ["Vietnam", "US", "UK"];
+      /*
+        push(...)     : thêm vào cuối
+        pop()         : xóa ở cuối
+        unshift(...)  : thêm vào đầu
+        shift()       : xóa ở đầu
+      */
+      // var x = friends.unshift("Add"); // x = 5
+      friends.unshift("Add")
+      var newArr = friends.concat(countries); // friends không thay đổi
+      
+      document.getElementById("check").innerHTML = friends + "<br>" + newArr;    
+    </script>
+  </body>
+</html>
