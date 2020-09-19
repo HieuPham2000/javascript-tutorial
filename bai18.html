@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 17: Constructor</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      // Không nên tạo number, string bằng new
+      var x = new Number(123);
+      var s = new String("123");
+      /* var person = {
+        firstName: "Hieu",
+        lastName: "Pham",
+        age: 19,
+        getFullName: function() {
+          return this.firstName + " " + this.lastName;
+        }
+      } */
+
+      // constructor
+      function Person(firstName, lastName, age, address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.address = address;
+        this.getFullName = function() {
+          return this.firstName + " " + this.lastName;
+        }
+      }
+
+      var p1 = new Person("Hieu", "Pham", 19); // address = undefined
+
+      // add method, property: cho p1 (không phải Person)
+      p1.university = "HUST";
+      p1.say = function() {
+        return "Hello";
+      }
+
+      document.getElementById("demo").innerHTML = p1.getFullName() + ", " + p1.university + ", " + p1.address;
+    </script>
+  </body>
+</html>
