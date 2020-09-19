@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 21: Sort Array</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="min-max"></p>
+    <p id="demo3"></p>
+    <script>
+      var friends = ["Hoang", "Quoc", "Tuan", "Tung", "Trung", "Dinh", "Phuc"];
+      var numbers = [100, 200, -30, 300, 2, 1, 110, -11, 22, 3344, -12];
+
+      // sắp xếp mảng string
+      friends.sort(); // sx alphabet
+      document.getElementById("demo1").innerHTML = friends;
+
+      // sắp xếp mảng number
+      /* định nghĩa thứ tự sắp xếp thông qua function, phụ thuộc vào giá trị return:
+          < 0 => sx a trước b
+          > 0 => sx a sau b (b trước a)
+          = 0 => không đổi vị trí
+        Sắp xếp tăng dần: return (a-b)
+        Sắp xếp giảm dần: reverse()
+        Hoặc: đổi thành return (b-a)
+      */
+      numbers.sort(function(a, b) {
+        return (a - b); 
+      });
+      var minNum = Math.min.apply(null, numbers); // nhớ có null
+      var maxNum = Math.max.apply(null, numbers); // nhớ có null
+      document.getElementById("demo2").innerHTML = numbers;
+      document.getElementById("min-max").innerHTML = "Min: " + minNum + "; Max: " + maxNum;
+
+
+      // sắp xếp mảng object => chỉ rõ tiêu chí
+      var persons = [
+        {name:"Hoang", age: 19},
+        {name:"An", age:25},
+        {name:"Quoc", age:20},
+        {name:"Tu", age:30},
+        {name:"Hai", age:15}
+      ]
+
+      // sx tăng dần theo tuổi
+      /* person.sort(function(a, b) {
+        return a.age - b.age; 
+      }); */
+      
+      // sx tăng dần theo tên
+      persons.sort(function(a, b) {
+        var name_a = a.name.toLowerCase();
+        var name_b = b.name.toLowerCase();
+        if (name_a < name_b) {
+          return -1;
+        } 
+        if (name_a > name_b) {
+          return 1;
+        }
+        return 0;
+      })
+      // document.getElementById("demo3").innerHTML = person; -> không thể in chung chung như này
+      document.getElementById("demo3").innerHTML =
+      persons[0].name + " - " + persons[0].age + "<br>" +
+      persons[1].name + " - " + persons[1].age + "<br>" +
+      persons[2].name + " - " + persons[2].age + "<br>" +
+      persons[3].name + " - " + persons[3].age + "<br>" +
+      persons[4].name + " - " + persons[4].age;
+    </script>
+  </body>
+</html>

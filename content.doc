@@ -7,4 +7,26 @@ Bài 6: Biến
 Bài 7: Toán tử số học: +, -, *, / (kết quả số thực), % (lấy dư cả với số thực), ** (lũy thừa), ++, --
 Bài 8: Phép gán (=, += ...), thứ tự ưu tiên (y = x++; z = ++x)
 Bài 9: Các kiểu dữ liệu: undefined, null, number, string, object, boolean...
-Bài 10: Function
+Bài 10: Function: không cần chỉ rõ kiểu của tham số
+  function name_func(danh sách tham số) {
+    return value;
+  }
+Bài 11: Object: Giữa key và value là dấu :
+  var name_obj = {
+    key1: value1,
+    key2: value2,
+    ...
+    method1: function(...) {
+      ...
+    } 
+  }
+Bài 12: Thuộc tính của object: truy xuất bằng cách name_obj.key1 hoặc name_obj['key1']; thêm/xóa thuộc tính
+Bài 13: Method: name_obj.method1(); thêm method
+Bài 14:
+Bài 15: String object: các method
+Bài 16: Number
+Bài 17: Method của Number
+Bài 18: Constructor: function Name(ds tham số) {}
+Bài 19: Array: tạo, truy xuất phần tử, kiểm tra có phải array
+Bài 20: Array methods
+Bài 21: Sort array: mảng string, mảng number, mảng object, tìm min max trong mảng number
