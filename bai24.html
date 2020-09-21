@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 24: Sinh số ngẫu nhiên</title>
+  </head>
+  <body>
+    <p id="dice"></p>
+    <p id="random"></p>
+    <script>
+      function getDiceValue() {
+        // Math.random()*6: (0, 6) -> floor: [0, 5] -> + 1: [1, 6]
+        return Math.floor(Math.random()*6) + 1;
+      }
+
+      function getRandomValue(start, end) {
+        // Math.random()*(end - start): (0, end - start + 1) -> floor: [0, end - start] -> +start: [start , end]
+        var distance = end - start + 1
+        return Math.floor(Math.random()*distance) + start;
+      }
+      
+      document.getElementById("dice").innerHTML = "Xúc xắc: " + getDiceValue();
+      document.getElementById("random").innerHTML = "Random từ 10 đến 100: " + getRandomValue(10, 100);
+      
+    </script>
+  </body>
+</html>

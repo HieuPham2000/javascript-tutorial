@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bài 22: Lặp trên từng phần tử của Array</title>
+  </head>
+  <body>
+    <p id="foreach"></p>
+    <p id="map"></p>
+    <p id="filter"></p>
+    <p id="find"></p>
+    <p id="some-every"></p>
+    
+    <script>
+      /* Tham số đầu vào là function (điều kiện)???
+       find() -> value của phần tử thỏa mãn đầu tiên
+       findIndex() -> index của phần tử thỏa mãn đầu tiên
+
+       some() -> true/false: có tồn tại ít nhất 1 phần tử thỏa mãn không
+       every() -> true/false: tất cả phần tử có thỏa mãn không
+
+       filter() -> array mới: lọc phần tử từ mảng cũ (function đầu vào return true/false)
+       map() -> array mới: (function đầu vào return value)
+
+       forEach(): duyệt từng phần tử, gọi func
+      */
+      var friends = ["Hoang", "Quoc", "Tuan", "Dinh", "Phuc", "Vy", "Tung", "Trung"];
+      var numbers = [100, 200, -30, 300, 2, 1, 11, -10, 20, 0, -12];
+
+      // forEach(): duyệt mảng?
+      var str = "";
+      friends.forEach(getNames);
+      function getNames(value, index, arr) { // tham số có sẵn???
+        str += value + " *** ";
+      }
+      document.getElementById("foreach").innerHTML = "forEach(): " + str;
+
+      // map()
+      var numbers2 = numbers.map(doubleValue);
+      function doubleValue(value) {
+        return value*2;
+      }
+      document.getElementById("map").innerHTML = "map(): " + numbers2;
+
+      // filter()
+      var numbers3 = numbers.filter(greaterOrEqual100);
+      function greaterOrEqual100(value) {
+        return value >= 100;
+      }
+      document.getElementById("filter").innerHTML = "filter(): " + numbers3;
+
+      // find()
+      var res = numbers.find(findNumber);
+      var index = numbers.findIndex(findNumber);
+      function findNumber(value) {
+        return value < 0;
+      }
+      document.getElementById("find").innerHTML = "find(): " + res + ", findIndex(): " + index; 
+      
+      // some, every
+      var test1 = numbers.some(greaterThan250);
+      var test2 = numbers.every(greaterThan250);
+      function greaterThan250(value) {
+        return value > 250;
+      }
+      document.getElementById("some-every").innerHTML = "some(): " + test1 + ", every(): " + test2; 
+    </script>
+  </body>
+</html>
